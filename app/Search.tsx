@@ -17,7 +17,7 @@ export default function Search() {
 
   return (
     <input
-      className="border p-2 px-4"
+      className="w-full p-4 pr-4 rounded-xl border border-gray-200 shadow-sm"
       onChange={(e) => {
         handleSearch(e.target.value);
       }}

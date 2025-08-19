@@ -1,16 +1,9 @@
 "use client";
 
-import Link from "next/link";
-
 export default function Error() {
   return (
-    <div>
-      <Link href="/" className="bg-gray-200 p-2">
-        Back to users
-      </Link>
-      <div className="mt-20">
-        <p>Internal Server Error</p>
-      </div>
+    <div className="bg-white rounded-2xl shadow-lg p-8 mt-4 text-center text-2xl font-bold text-gray-800">
+      <p>Internal Server Error</p>
     </div>
   );
 }

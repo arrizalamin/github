@@ -21,19 +21,22 @@ export default function UserList(props: { users: User[] }) {
   return (
     <>
       {filteredUsers.map((user) => (
-        <Link href={`/users/${user.login}`}>
-          <li className="flex gap-4" key={user.id}>
+        <Link href={`/users/${user.login}`} key={user.id}>
+          <li className="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-200 hover:shadow-md border border-gray-100 hover:border-gray-200 mb-2">
             <img
-              width={100}
-              height={100}
+              className="size-16 rounded-full object-cover border-2 border-gray-200"
+              width={64}
+              height={64}
               src={user.avatar_url}
               alt={user.login}
             />
-            <div className="flex flex-col gap-2">
-              <p>{user.login}</p>
-              <p>
+            <div className="flex flex-col">
+              <h3 className="font-semibold text-lg text-gray-800">
+                {user.login}
+              </h3>
+              <p className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
                 <a href={`https://github.com/${user.login}`} target="_blank">
-                  Link to profile
+                  View GitHub Profile
                 </a>
               </p>
             </div>
